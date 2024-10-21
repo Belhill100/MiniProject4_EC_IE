@@ -1,4 +1,4 @@
-#N canvas 204 103 1920 989 12;
+#N canvas 0 0 1370 729 12;
 #X obj 11 113 oscparse;
 #X msg 12 17 listen 212;
 #X obj 12 63 netreceive -u -b;
@@ -65,7 +65,7 @@
 #X obj 1031 110 receive signal;
 #X obj 39 194 print;
 #X obj 240 273 receive signal;
-#X obj 14 338 receive signal;
+#X obj 66 285 receive signal;
 #X obj 850 553 * 1000;
 #X obj 856 604 osc~;
 #X obj 909 609 hsl 162 19 0 1000 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
@@ -95,7 +95,6 @@
 #X obj 1287 700 metro 500;
 #X obj 1289 728 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X obj 1239 573 receive signal;
-#X obj 1260 637 route toggle2;
 #X text 1273 607 X;
 #X msg 1293 760 0 \, 1 200;
 #X obj 1293 784 line~;
@@ -105,6 +104,7 @@
 #X obj 1293 880 cos~;
 #X obj 1293 904 lop~ 1000;
 #X obj 1293 928 throw~ \$0-output;
+#X obj 1260 637 route toggle3;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
@@ -191,13 +191,13 @@
 #X connect 91 0 74 1;
 #X connect 92 0 93 0;
 #X connect 93 0 94 0;
-#X connect 94 0 98 0;
-#X connect 95 0 96 0;
-#X connect 96 0 92 0;
+#X connect 94 0 97 0;
+#X connect 95 0 105 0;
+#X connect 97 0 98 0;
 #X connect 98 0 99 0;
 #X connect 99 0 100 0;
 #X connect 100 0 101 0;
 #X connect 101 0 102 0;
 #X connect 102 0 103 0;
 #X connect 103 0 104 0;
-#X connect 104 0 105 0;
+#X connect 105 0 92 0;
