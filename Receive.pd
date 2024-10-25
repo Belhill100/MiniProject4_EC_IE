@@ -69,9 +69,9 @@
 #X obj 413 83 delwrite~ eco 2000;
 #X obj 28 317 throw~ $delayIn;
 #X obj 28 350 catch~ $delayOut;
-#X obj 619 269 throw~ $delayOut;
+#X obj 627 326 throw~ $delayOut;
 #X obj 381 7 catch~ $delayIn;
-#X obj 709 235 throw~ $delayFeedback;
+#X obj 717 292 throw~ $delayFeedback;
 #X obj 417 40 catch~ $delayFeedback;
 #X text 607 16 DELAY/ECO;
 #X text 299 238 DISTORTION;
@@ -81,10 +81,10 @@
 #X obj 317 420 + 0.1;
 #X obj 290 486 clip~ -0.3 0.3;
 #X obj 28 389 *~ 1;
-#X obj 606 163 delread~ eco;
-#X obj 605 132 * 1000;
+#X obj 614 220 delread~ eco;
+#X obj 613 189 * 1000;
 #X obj 603 96 route slider2Dx;
-#X obj 705 197 *~;
+#X obj 713 254 *~;
 #X obj 739 93 route slider2Dy;
 #X obj 306 352 route slider2;
 #X obj 102 435 route slider1;
@@ -92,8 +92,8 @@
 #X obj 357 625 receive signal;
 #X obj 359 656 route slider4;
 #X obj 97 468 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 760 145 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X obj 433 184 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 740 184 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 549 143 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 82 689 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 18 728 *~;
 #X obj 64 722 osc~;
@@ -136,7 +136,7 @@
 #X obj 920 378 receive signal;
 #X text 683 456 CLAP;
 #X text 943 350 Buttons;
-#N canvas 93 109 1244 932 button 1;
+#N canvas 93 109 1244 932 button 0;
 #X obj 37 37 inlet;
 #X obj 1392 518 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 1395 655 noteout 1;
@@ -646,7 +646,7 @@
 #X obj 100 502 * 1.5;
 #X obj 100 526 * 200;
 #X text 1800 66 BASS;
-#N canvas 306 96 1244 809 toggle 1;
+#N canvas 306 96 1244 809 toggle 0;
 #X obj 1392 518 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
 #X obj 1395 655 noteout 1;
 #X msg 1397 547 65;
@@ -1638,10 +1638,8 @@
 #X connect 82 0 70 0;
 #X connect 82 0 85 0;
 #X connect 83 0 82 0;
-#X connect 84 0 83 0;
 #X connect 84 0 94 0;
 #X connect 85 0 72 0;
-#X connect 86 0 85 1;
 #X connect 86 0 93 0;
 #X connect 87 0 4 0;
 #X connect 88 0 92 0;
@@ -1649,6 +1647,8 @@
 #X connect 90 0 91 0;
 #X connect 91 0 106 0;
 #X connect 92 0 141 0;
+#X connect 93 0 85 1;
+#X connect 94 0 83 0;
 #X connect 95 0 97 0;
 #X connect 96 0 100 0;
 #X connect 97 0 96 1;
