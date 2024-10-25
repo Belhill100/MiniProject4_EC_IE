@@ -22,7 +22,7 @@ This project uses the **OSC Controller app** (Open Sound Control) and **PureData
 We chose to implement this system using **OSC Controller and PureData** due to their flexibility in live audio manipulation and real-time control. OSC is ideal for transmitting control data over networks, while PureData allows for powerful audio synthesis and effects processing. This combination provides the creative freedom required for live DJ performances and interactive music creation.
 
 ## Demo
-Watch our demo video on YouTube [here](your-video-link).
+Watch our demo video on YouTube [here](https://youtu.be/Brq70HoEHXY).
 
 ## Code and Repository
 The full source code for this project can be found in this repository. The code follows clean coding principles, making it easy to read and understand. 
